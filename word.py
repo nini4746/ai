@@ -29,12 +29,11 @@ model.add(Dense(32, activation='relu'))
 model.add(Dense(actions.shape[0], activation='softmax'))
 
 # 학습된 가중치 불러오기
-model.load_weights('./model.h5')
-
+model.load_weights('./word_model.h5')
 
 # 결과 저장용
 sequence = []
-threshold = 0.75
+threshold = 0.80
 
 # 키포인트 추출 함수
 def extract_keypoints(results):
